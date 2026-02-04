@@ -25,3 +25,6 @@ I took my two storage accounts and intentionally lowered the security posture of
 
 
 I had to let Defender scan this. I waited a day in order for it to pickup that I had created another Storage Account. 
+
+<img width="761" height="342" alt="Storage Account Full list of recommendations" src="https://github.com/user-attachments/assets/c7eb54c0-5e88-40c5-9fec-b3f475d6d075" />
+  As you can see, I do not have premium Defender for Cloud enabled right so it will not give me a risk evaluation. I have subscribed to one below and had to wait a short time for it to activate and scan my environment. 
