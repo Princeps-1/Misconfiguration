@@ -7,7 +7,7 @@ I will be remediating common Azure vulnerabilities using Defender for Cloud.
 I took my two storage accounts and intentionally lowered the security posture of both of them to start this task.
 1. I created a Security Admin role that was assigned to a guest user. This gave them the ability to full manage both storage accounts - I am not adhering to principle of least privilege. 
 2. I allowed complete public access. I was not holding back here. I am **not** restricting access to pertinent users. 
-3. I allowed anonymous blob access - This removes non-repudiation!
+3. I allowed anonymous blob access - This removes non-repudiation and allows public access!
 4. I disabled secure transfer - Confidentiality of the CIA triad is not being met!
 5. I also lowered the minimum encryption standard to TLS 1.0 - as we know this is a catastrophe waiting to happen.
 6. I did not use Key Vault to store my keys - I will not be rotating them and I will allowed shared key access.
