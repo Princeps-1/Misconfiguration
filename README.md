@@ -1,8 +1,22 @@
-# Misconfiguration
+# Overview
 
-I will be remediating common Azure vulnerabilities using Defender for Cloud. 
+This project will demonstrate the creation, misconfiguration and remdiation of an enterprise environment within Azure. 
 
-## Creating the risk
+## Objectives
+
+- Enforce secure encryption protocols
+- Implement and adhere to the principle of least privilege
+- Harden the environment in alignment with best security practices
+
+## Tools Used
+
+- Azure AD
+- Azure Monitor
+- Log Analytics
+- Microsoft Defender for Cloud
+- Key Vaults
+
+## Creating the risk - Misconfiguration
 
 I took my two storage accounts and intentionally lowered the security posture of both of them to start this task.
 1. I created a Security Admin role that was assigned to a guest user. This gave them the ability to full manage both storage accounts - I am not adhering to principle of least privilege. 
@@ -59,5 +73,17 @@ This includes and is not exclusive to:
 
 ## Post Remediation Scan
 
+After waiting a day for Azure to scan my environment, I received the following:
 
-  
+   <img width="1585" height="511" alt="image" src="https://github.com/user-attachments/assets/26b63c44-8f16-44e1-8b5a-4a488a5c2e5a" />
+
+There are only a handful of Low level recommendations remaining, with these not being pertinent. I have successfully secured my environment by remediating the Critical, High and Medium issues.
+
+## Lessons Learned 📝
+
+The two elephants in the room here are Least Privilege & Enforcing Secure Encryption standards. The former can be so easy to miss, because over time privilege creep can occur and only regular auditing after the fact can prevent this from occuring. The latter can prevent resourceful bad actors from abusing lower encryption standards to gain access to the network and making sure at least TLS 1.2 is implemented prevents this. 
+
+Not withstanding the fact that my network should not be accessible publicly, if there is a need for this I will make sure that my environment is hardened according to best security practices, which includes Principle of Least Privilege!
+My final thought here would be from a higher level in which I should make a policy that no outsider to the network (includes Guests) should be able to obtain any role above that under any circumstances. A solid policy from the outset prevents mishaps in the future!
+
+A momentary headache can prevent a lifetime of regret!
