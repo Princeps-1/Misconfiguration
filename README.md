@@ -1,14 +1,14 @@
-# Overview
+# Overview 🗺️
 
 This project will demonstrate the creation, misconfiguration and remdiation of an enterprise environment within Azure. 
 
-## Objectives
+## Objectives 📌
 
 - Enforce secure encryption protocols
 - Implement and adhere to the principle of least privilege
 - Harden the environment in alignment with best security practices
 
-## Tools Used
+## Tools Used 🛠️
 
 - Azure AD
 - Azure Monitor
@@ -16,7 +16,7 @@ This project will demonstrate the creation, misconfiguration and remdiation of a
 - Microsoft Defender for Cloud
 - Key Vaults
 
-## Creating the risk - Misconfiguration
+## Creating the risk - Misconfiguration ❗
 
 I took my two storage accounts and intentionally lowered the security posture of both of them to start this task.
 1. I created a Security Admin role that was assigned to a guest user. This gave them the ability to full manage both storage accounts - I am not adhering to principle of least privilege. 
@@ -45,7 +45,7 @@ I had to let Defender scan this. I waited a day in order for it to pickup that I
 
    <img width="1602" height="616" alt="image" src="https://github.com/user-attachments/assets/135cf45d-3130-4258-bd85-6ac835c76fe8" />
 
-## Evaluating and rectifying the risk
+## Evaluating and rectifying the risk 📝
 
 In my environment, I have 1 Critical risk, 1 High risk, 1 Medium risk and lots of Low risks. 
 I will go through the risk in order of highest severity:
@@ -71,7 +71,7 @@ This includes and is not exclusive to:
 - Using a private link connection
 - Windows Virtual Machines should enable Azure Disk Encryption or EncryptionAtHost
 
-## Post Remediation Scan
+## Post Remediation Scan ☑️
 
 After waiting a day for Azure to scan my environment, I received the following:
 
